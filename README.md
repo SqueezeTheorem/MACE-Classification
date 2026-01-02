@@ -5,7 +5,7 @@ Population Classification Using SNPs
 # SNP Analysis Report: Additive, Dominant, Recessive (ADR) Modeling
 Findings of a "Deep SNP Analysis" performed on the uncorrelated dataset. The dataset is first cleaned by filtering out highly correlation features. Not all the SNP behave in the ideal  and categorize each SNP based on its most likely biological mode of inheritance: **Additive**, **Dominant**, or **Recessive**.
 
-## 2. Methodology
+## Methodology
 
 For every Single Nucleotide Polymorphism (SNP) in the dataset, we tested three competing logistic regression models against the `OUTCOME SEVERITY` variable:
 
