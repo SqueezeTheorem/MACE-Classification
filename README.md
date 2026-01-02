@@ -1,8 +1,10 @@
-# MACE-Classification
+# SNP Analysis Report: MACE-Classification
 Population Classification Using SNPs 
 
+# Top "stable" SNP selection using Lasso Bootstrapping
+This method essentially fit a Lasso classification model for over few hundered random sample. SNPs are sorted as per weight in the linear model and the top SNPs that appear 80-90% of the time in the top order are selected as the "stable" SNPs for classfication task. T
 
-# SNP Analysis Report: Additive, Dominant, Recessive (ADR) Modeling
+# Additive, Dominant, Recessive (ADR) Modeling
 Findings of a "Deep SNP Analysis" performed on the uncorrelated dataset. The dataset is first cleaned by filtering out highly correlation features. Not all the SNP behave in the ideal  and categorize each SNP based on its most likely biological mode of inheritance: **Additive**, **Dominant**, or **Recessive**.
 
 ## Methodology
@@ -19,3 +21,5 @@ For every Single Nucleotide Polymorphism (SNP) in the dataset, we tested three c
 **Model Selection:** We used the **Akaike Information Criterion (AIC)** to select the best model for each SNP.
 
 > _The model with the lowest AIC is considered the best fit as it balances goodness-of-fit with model simplicity._
+
+
