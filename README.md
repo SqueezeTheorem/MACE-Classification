@@ -1,15 +1,15 @@
 # SNP Analysis Report: MACE-Classification
 Population Classification Using SNPs 
 
-# Top "stable" SNP selection using Lasso Bootstrapping
-This method essentially fit a Lasso classification model for over few hundered random sample. SNPs are sorted as per weight in the linear model and the top SNPs that appear 80-90% of the time in the top order are selected as the "stable" SNPs for classfication task. T
+# "Stable" SNP selection using Lasso Bootstrapping
+This method essentially fit a Lasso classification model for over few hundered random sample. SNPs are sorted as per weight in the linear model and the top SNPs that appear >= 80-90% of the time in the top order are selected as the "stable" SNPs for classfication task. Lasso algorithm performs automated variable selection by shrinking the coefficients of weak or redundant SNPs to exactly zero. We then calculated a Stability Score for each marker, representing the percentage of times it was selected as a significant predictor across all iterations.
 
-# Additive, Dominant, Recessive (ADR) Modeling
+# Additive, Dominant, or Recessive (ADR) Modeling
 Findings of a "Deep SNP Analysis" performed on the uncorrelated dataset. The dataset is first cleaned by filtering out highly correlation features. Not all the SNP behave in the ideal  and categorize each SNP based on its most likely biological mode of inheritance: **Additive**, **Dominant**, or **Recessive**.
 
 ## Methodology
 
-For every Single Nucleotide Polymorphism (SNP) in the dataset, we tested three competing logistic regression models against the `OUTCOME SEVERITY` variable:
+For every Single Nucleotide Polymorphism (SNP) in the dataset, we tested three competing logistic regression models against the `OUTCOME MACE` variable:
 
 1. **Additive Model**: Assumes a linear increase in risk with each additional copy of the minor allele.
    - _Encoding_: 0 (Homozygous Major) -> 1 (Heterozygous) -> 2 (Homozygous Minor).
